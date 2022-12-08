@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: fit-content;
+  width: 100vw;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+button:not(.calendar-event):hover {
+  cursor: not-allowed;
+}
+button.calendar-event {
+  background-color: red;
+  color: white;
+  transition: all .2s ease-in-out;
+}
+button.calendar-event:focus {
+  background-color: brown;
+}
+.d27 {
+  background-image: url("/public/Resources/27.png");
+  height: 150px;
+  width: 100%;
+  background-size: cover;
 }
